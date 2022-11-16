@@ -1,14 +1,124 @@
-// <BUTTONS (a.btn+tab)>
-// Снипет (HTML): btn
-
 .button {
     display: inline-flex;
-    padding: 0 0;
-    @media (any-hover: hover) {
-        &:hover {
+    align-items: center;
+    justify-content: center;
+    min-width: 185px;
+    min-height: 64px;
+    padding: 0 24px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+    &_grey {
+        background-color: $greyColor;
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $silverColor;
+            }
         }
     }
-    &._fw {
-        width: 100%;
+    &_brown {
+        background-color: $lightbrownColor;
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: #d39369;
+            }
+        }
+    }
+    &:active {
+        transform: scale(0.9);
+    }
+}
+
+.actions {
+    display: flex;
+    gap: 5px;
+    &__item {
+        svg {
+            width: 20px;
+            height: 20px;
+            pointer-events: none;
+        }
+    }
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 30%;
+        transition: all 0.3s ease;
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $actionsColor;
+            }
+        }
+        @media (any-hover: none) {
+            &:active {
+                background-color: $actionsColor;
+            }
+        }
+    }
+}
+
+.search-form {
+    &__input {
+        float: left;
+        width: 0;
+        padding: 0;
+        margin-right: 5px;
+        font-size: rem(15);
+        line-height: 38px;
+        border: 1px solid $actionsColor;
+        border-radius: 10px;
+        outline: 0;
+        opacity: 0;
+        transition: all 0.3s ease;
+        @media (max-width: em(575.98)) {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-right: 0;
+            transform: translateX(-50%);
+        }
+        &::placeholder {
+            color: $silverColor;
+        }
+        &:focus {
+            &::placeholder {
+                color: transparent;
+            }
+        }
+        &:focus,
+        &:not(:placeholder-shown) {
+            width: 240px;
+            padding: 0 10px;
+            border: 1px solid $actionsColor;
+            opacity: 1;
+            @media (max-width: em(575.98)) {
+                width: 90%;
+            }
+            + .search-form__btn {
+                background-color: $actionsColor;
+            }
+        }
+    }
+    &__item {
+        &:hover {
+            .search-form__input {
+                width: 240px;
+                padding: 0 10px;
+                border: 1px solid $actionsColor;
+                opacity: 1;
+                @media (max-width: em(575.98)) {
+                    width: 90%;
+                }
+            }
+            .search-form__btn {
+                background-color: $actionsColor;
+            }
+        }
     }
 }

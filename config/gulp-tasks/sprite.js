@@ -14,7 +14,7 @@ export const sprite = () => {
             svgSprite({
                 mode: {
                     symbol: {
-                        sprite: '../img/icons/icons.svg',
+                        sprite: '../img/icons/sprite.svg',
                         //example: true
                     },
                 },
@@ -26,7 +26,12 @@ export const sprite = () => {
                     transform: [
                         {
                             svgo: {
-                                plugins: [{ removeXMLNS: true }, { convertPathData: false }, { removeViewBox: false }],
+                                plugins: [
+                                    { removeXMLNS: true },
+                                    { convertPathData: false },
+                                    { removeViewBox: false },
+                                    { removeAttrs: { attrs: ['class', 'fill', 'data-name', 'stroke'] } },
+                                ],
                             },
                         },
                     ],

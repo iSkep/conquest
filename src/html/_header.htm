@@ -1,4 +1,48 @@
-<header class="header">
-    <div class="header__container">
+<header class="header" data-scroll="80" data-lp>
+    <div class="header__body">
+        <div class="header__main">
+            <div class="header__menu menu">
+                <button class="menu__icon icon-menu" type="button"><span></span></button>
+                <nav class="menu__body">
+                    <ul class="menu__list">
+                        <li class="menu__item"><a href="#" class="menu__link">Главная</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Каталог</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Акции</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Доставка</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <a class="header__logo" href="#">
+                <img src="../img/icons/logo.svg" alt="Логотип">
+                <span>Conquest</span>
+            </a>
+        </div>
+        <div class="header__actions actions">
+            <div class="actions__item search-form">
+                <form action="#" class="search-form__item">
+                    <input class="search-form__input" placeholder="Search..." autocomplete="off" type="text" name="form[]">
+                    <button type="submit" class="search-form__btn actions__icon">
+                        <svg>
+                            <use xlink:href="@img/icons/sprite.svg#svg-search"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+            <div class="actions__item favorites-header">
+                <a class="actions__icon" href="#">
+                    <svg>
+                        <use xlink:href="@img/icons/sprite.svg#svg-heart"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="actions__item cart-header">
+                <button class="actions__icon" type="button">
+                    <svg>
+                        <use xlink:href="@img/icons/sprite.svg#svg-cart"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
     </div>
 </header>

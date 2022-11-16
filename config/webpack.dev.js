@@ -17,8 +17,16 @@ if (!pugPages.length) {
         new FileIncludeWebpackPlugin({
             source: srcFolder,
             htmlBeautifyOptions: {
-                'indent-with-tabs': true,
-                indent_size: 3,
+                // 'indent-with-tabs': true,
+                html: {
+                    indent_size: 4,
+                    js: {
+                        indent_size: 4,
+                    },
+                    css: {
+                        indent_size: 4,
+                    },
+                },
             },
             replace: [
                 { regex: '<link rel="stylesheet" href="css/style.min.css">', to: '' },
