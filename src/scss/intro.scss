@@ -30,13 +30,13 @@
             left: -68px;
             width: 50px;
             height: 1px;
-            background-color: #8b8371;
+            background-color: $brownColor;
             @media (max-width: $mobile) {
                 display: none;
             }
         }
     }
-    &__subtitle {
+    &__title {
         margin-bottom: 1em;
     }
     &__text {
@@ -107,7 +107,7 @@
             right: -65px;
             width: 50px;
             height: 1px;
-            background-color: #8b8371;
+            background-color: $brownColor;
             transform: translateY(-100%);
         }
     }
@@ -140,7 +140,7 @@
             left: -65px;
             width: 50px;
             height: 1px;
-            background-color: #8b8371;
+            background-color: $brownColor;
             transform: translateY(-100%);
             @media (max-width: $tablet) {
                 left: 120px;

@@ -1,8 +1,7 @@
 // Заголовки, общие БЭМ блоки и проче...
-
-.subtitle {
+.title {
     font-family: "Playfair Display", sans-serif;
-    @include adaptiveValue("font-size", 30, 16);
+    @include adaptiveValue("font-size", 32, 16);
     font-weight: 400;
     line-height: 130%;
     color: #1b1a17;

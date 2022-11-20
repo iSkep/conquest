@@ -1,0 +1,164 @@
+.popular {
+    padding: 75px 0;
+    &__container {
+        position: relative;
+    }
+    &__title {
+        margin-bottom: 45px;
+        text-align: center;
+    }
+    &__show-more {
+        position: absolute;
+        top: 35px;
+        right: 15px;
+        padding-bottom: 7px;
+        font-size: rem(16);
+        font-weight: 500;
+        color: $greyColor;
+        border-bottom: 1px solid #c4c0b6;
+        transition: all 0.3s ease;
+        &:hover {
+            padding-bottom: 4px;
+            color: $silverColor;
+        }
+    }
+    &__list {
+        display: grid;
+        grid-template:
+            "m m l l l l" auto
+            "s1 s1 s1 s2 s2 s2" auto
+            / 170px 170px 170px 170px 170px 170px;
+        gap: 30px;
+        justify-content: space-between;
+    }
+    &__item {
+        background-color: $bgColor;
+        &_size {
+            &_s1 {
+                grid-area: s1;
+                padding: 0 40px;
+            }
+            &_s2 {
+                grid-area: s2;
+                padding: 0 40px;
+            }
+            &_m {
+                grid-area: m;
+                padding: 0 28px;
+            }
+            &_l {
+                grid-area: l;
+                padding: 0 55px;
+            }
+        }
+    }
+}
+
+.card {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    height: 100%;
+    &__desc {
+        display: grid;
+        grid-template-rows: auto auto 1fr;
+        padding: 40px 0;
+    }
+    &__title {
+        font-family: "Playfair Display", sans-serif;
+        font-weight: 700;
+        line-height: 170%;
+        color: rgba(27, 26, 23, 0.82);
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        &_large {
+            font-size: rem(18);
+        }
+    }
+    &__title-link {
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: $brownColor;
+            transition: transform 0.3s ease-out;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                &::after {
+                    transform: scaleX(1);
+                    transform-origin: bottom left;
+                }
+            }
+        }
+    }
+    &__price {
+        padding: 7px 0;
+        font-family: "Prata", sans-serif;
+        font-size: rem(12);
+        &_large {
+            font-size: rem(16);
+        }
+    }
+    &__image {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        min-height: 220px;
+        padding: 10px;
+        background: url("@img/main-page/popular/ellipse.svg") no-repeat center/contain;
+        .popular__item_size_m & {
+            top: 50%;
+            width: 308px;
+            height: 308px;
+            margin-left: -126px;
+            transform: translateY(-50%);
+        }
+        .popular__item_size_s & {
+            min-height: 220px;
+        }
+        .popular__item_size_l & {
+            min-height: 467px;
+            background: url("@img/main-page/popular/ellipse-2.svg") no-repeat 85% / 40%;
+        }
+    }
+    &__image-item-ibg {
+        display: block;
+        height: 100%;
+    }
+    &__link {
+        position: relative;
+        align-self: end;
+        padding-left: 48px;
+        font-family: "Playfair Display", sans-serif;
+        font-size: rem(16);
+        color: #1b1a17;
+        transition: all 0.3s ease;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 30px;
+            height: 1px;
+            background-color: $brownColor;
+            transition: all 0.3s ease;
+            transform: translateY(-100%);
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                color: $silverColor;
+                &::before {
+                    left: 5px;
+                    background-color: $silverColor;
+                }
+            }
+        }
+    }
+}
