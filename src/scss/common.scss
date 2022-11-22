@@ -1,7 +1,7 @@
 // Заголовки, общие БЭМ блоки и проче...
 .title {
     font-family: "Playfair Display", sans-serif;
-    @include adaptiveValue("font-size", 32, 16);
+    @include adaptiveValue("font-size", 32, 20);
     font-weight: 400;
     line-height: 130%;
     color: #1b1a17;

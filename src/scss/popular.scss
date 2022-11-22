@@ -1,22 +1,30 @@
 .popular {
-    padding: 75px 0;
+    @include adaptiveValue("padding-top", 75, 30);
+    @include adaptiveValue("padding-bottom", 75, 30);
     &__container {
         position: relative;
     }
     &__title {
         margin-bottom: 45px;
         text-align: center;
+        @media (max-width: $mobileSmall) {
+            margin-bottom: 55px;
+        }
     }
     &__show-more {
         position: absolute;
         top: 35px;
         right: 15px;
         padding-bottom: 7px;
-        font-size: rem(16);
+        @include adaptiveValue("font-size", 16, 14);
         font-weight: 500;
         color: $greyColor;
         border-bottom: 1px solid #c4c0b6;
         transition: all 0.3s ease;
+        @media (max-width: $mobileSmall) {
+            top: 50px;
+            padding-bottom: 3px;
+        }
         &:hover {
             padding-bottom: 4px;
             color: $silverColor;
@@ -25,30 +33,45 @@
     &__list {
         display: grid;
         grid-template:
-            "m m l l l l" auto
-            "s1 s1 s1 s2 s2 s2" auto
-            / 170px 170px 170px 170px 170px 170px;
+            "m m l l l l"
+            "s1 s1 s1 s2 s2 s2";
+        grid-template-rows: auto auto;
+        grid-template-columns: repeat(6, 1fr);
         gap: 30px;
-        justify-content: space-between;
+        @media (max-width: $mobile) {
+            grid-template:
+                "m"
+                "l"
+                "s1"
+                "s2";
+            grid-template-rows: repeat(4, auto);
+            grid-template-columns: 1fr;
+        }
     }
     &__item {
         background-color: $bgColor;
         &_size {
             &_s1 {
                 grid-area: s1;
-                padding: 0 40px;
+                @include adaptiveValue("padding-right", 40, 15, 1170, 767.98, 1);
+                @include adaptiveValue("padding-left", 40, 15, 1170, 767.98, 1);
             }
             &_s2 {
                 grid-area: s2;
-                padding: 0 40px;
+                @include adaptiveValue("padding-right", 40, 15, 1170, 767.98, 1);
+                @include adaptiveValue("padding-left", 40, 15, 1170, 767.98, 1);
             }
             &_m {
                 grid-area: m;
                 padding: 0 28px;
+                @media (max-width: $mobileSmall) {
+                    padding: 0 10px;
+                }
             }
             &_l {
                 grid-area: l;
-                padding: 0 55px;
+                @include adaptiveValue("padding-right", 55, 20, 1170, 767.98, 1);
+                @include adaptiveValue("padding-left", 55, 20, 1170, 767.98, 1);
             }
         }
     }
@@ -63,6 +86,9 @@
         display: grid;
         grid-template-rows: auto auto 1fr;
         padding: 40px 0;
+        @media (max-width: $mobile) {
+            padding: 25px 0;
+        }
     }
     &__title {
         font-family: "Playfair Display", sans-serif;
@@ -73,6 +99,9 @@
         letter-spacing: 0.03em;
         &_large {
             font-size: rem(18);
+            @media (max-width: $mobileSmall) {
+                font-size: rem(14);
+            }
         }
     }
     &__title-link {
@@ -104,6 +133,9 @@
         font-size: rem(12);
         &_large {
             font-size: rem(16);
+            @media (max-width: $mobileSmall) {
+                font-size: rem(12);
+            }
         }
     }
     &__image {
@@ -115,17 +147,25 @@
         background: url("@img/main-page/popular/ellipse.svg") no-repeat center/contain;
         .popular__item_size_m & {
             top: 50%;
-            width: 308px;
-            height: 308px;
-            margin-left: -126px;
+            @include adaptiveValue("width", 308, 220, 1170, 767.98, 1);
+            @include adaptiveValue("height", 308, 220, 1170, 767.98, 1);
+            @include adaptiveValue("margin-left", -126, -154, 1170, 767.98, 1);
             transform: translateY(-50%);
-        }
-        .popular__item_size_s & {
-            min-height: 220px;
+            @media (max-width: $mobile) {
+                width: auto;
+                margin: 0;
+            }
         }
         .popular__item_size_l & {
-            min-height: 467px;
+            @include adaptiveValue("min-height", 467, 375, 1170, 767.98, 1);
             background: url("@img/main-page/popular/ellipse-2.svg") no-repeat 85% / 40%;
+            @media (max-width: $mobile) {
+                background: url("@img/main-page/popular/ellipse-2.svg") no-repeat calc(80% + 20px) / auto 85%;
+            }
+            @media (max-width: $mobileSmall) {
+                min-height: 220px;
+                background: url("@img/main-page/popular/ellipse-2.svg") no-repeat calc(80% + 10px)/auto 83%;
+            }
         }
     }
     &__image-item-ibg {
@@ -140,6 +180,10 @@
         font-size: rem(16);
         color: #1b1a17;
         transition: all 0.3s ease;
+        @media (max-width: $mobileSmall) {
+            padding-left: 20px;
+            font-size: rem(14);
+        }
         &::before {
             content: "";
             position: absolute;
@@ -150,6 +194,9 @@
             background-color: $brownColor;
             transition: all 0.3s ease;
             transform: translateY(-100%);
+            @media (max-width: $mobileSmall) {
+                width: 10px;
+            }
         }
         @media (any-hover: hover) {
             &:hover {
