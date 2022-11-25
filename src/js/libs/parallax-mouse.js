@@ -38,18 +38,18 @@ class MousePRLX {
         };
         this.config = Object.assign(defaultConfig, props);
         if (this.config.init) {
-            const paralaxMouse = document.querySelectorAll('[data-prlx-mouse]');
-            if (paralaxMouse.length) {
-                this.paralaxMouseInit(paralaxMouse);
-                this.setLogging(`Проснулся, слежу за объектами: (${paralaxMouse.length})`);
+            const parallaxMouse = document.querySelectorAll('[data-prlx-mouse]');
+            if (parallaxMouse.length) {
+                this.parallaxMouseInit(parallaxMouse);
+                this.setLogging(`Проснулся, слежу за объектами: (${parallaxMouse.length})`);
             } else {
                 this.setLogging('Нет ни одного объекта. Сплю...zzZZZzZZz...');
             }
         }
     }
-    paralaxMouseInit(paralaxMouse) {
-        paralaxMouse.forEach((el) => {
-            const paralaxMouseWrapper = el.closest('[data-prlx-mouse-wrapper]');
+    parallaxMouseInit(parallaxMouse) {
+        parallaxMouse.forEach((el) => {
+            const parallaxMouseWrapper = el.closest('[data-prlx-mouse-wrapper]');
 
             // Коэф. X
             const paramСoefficientX = el.dataset.prlxCx ? +el.dataset.prlxCx : 100;
@@ -71,10 +71,10 @@ class MousePRLX {
             setMouseParallaxStyle();
 
             // Проверяю на наличие родителя, в котором будет считываться положение мыши
-            if (paralaxMouseWrapper) {
-                mouseMoveParalax(paralaxMouseWrapper);
+            if (parallaxMouseWrapper) {
+                setMouseParallax(parallaxMouseWrapper);
             } else {
-                mouseMoveParalax();
+                setMouseParallax();
             }
 
             function setMouseParallaxStyle() {
@@ -87,7 +87,7 @@ class MousePRLX {
                 }%,0);`;
                 requestAnimationFrame(setMouseParallaxStyle);
             }
-            function mouseMoveParalax(wrapper = window) {
+            function setMouseParallax(wrapper = window) {
                 wrapper.addEventListener('mousemove', function (e) {
                     const offsetTop = el.getBoundingClientRect().top + window.scrollY;
                     if (offsetTop >= window.scrollY || offsetTop + el.offsetHeight >= window.scrollY) {

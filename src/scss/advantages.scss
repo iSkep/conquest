@@ -1,0 +1,187 @@
+.advantages {
+    position: relative;
+    @include adaptiveValue("padding-top", 52, 20);
+    @include adaptiveValue("padding-bottom", 52, 20);
+    overflow: hidden;
+    background-color: $bgColor;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #f7f5ef;
+        transform: translateX(calc(-50% - 230px));
+        @media (max-width: $mobile) {
+            display: none;
+        }
+    }
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 15px;
+        @media (max-width: $mobile) {
+            grid-template-columns: 1fr;
+            @include adaptiveValue("row-gap", 45, 25, 767.98, 320, 1);
+            margin-bottom: 10px;
+        }
+    }
+    &__slider {
+        @media (max-width: $mobile) {
+            order: 1;
+        }
+    }
+    &__slide {
+        position: relative;
+        min-height: 250px;
+    }
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-right: 225px;
+        @media (max-width: $mobile) {
+            padding: 0;
+        }
+    }
+    &__arrow {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        &_left,
+        &_right {
+            &::before {
+                content: " ";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                display: block;
+                width: 10px;
+                height: 10px;
+                cursor: pointer;
+                border-bottom: 1px solid #1b1a17;
+                border-left: 1px solid #1b1a17;
+                transition: all 0.3s ease 0s;
+            }
+            @media (any-hover: hover) {
+                &:hover {
+                    &:not([disabled]) {
+                        &::before {
+                            border-color: $lightbrownColor;
+                        }
+                    }
+                }
+            }
+            &[disabled] {
+                &::before {
+                    border-color: $silverColor;
+                }
+            }
+        }
+        &_left {
+            &::before {
+                transform: rotate(45deg) translate(-50%, -20%);
+            }
+            &:active {
+                &:not([disabled]) {
+                    &::before {
+                        left: 40%;
+                    }
+                }
+            }
+        }
+        &_right {
+            &::before {
+                transform: rotate(-135deg) translate(90%, -20%);
+            }
+            &:active {
+                &:not([disabled]) {
+                    &::before {
+                        left: 60%;
+                    }
+                }
+            }
+        }
+    }
+    &__fraction {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        font-family: "Prata", sans-serif;
+        font-size: rem(12);
+        color: rgba(27, 26, 23, 0.82);
+        pointer-events: none;
+    }
+    &__desc {
+        padding: 95px 35px 65px 70px;
+        @media (max-width: $tablet) {
+            padding: 95px 35px 65px 35px;
+        }
+        @media (max-width: $mobile) {
+            padding: 0;
+            text-align: center;
+        }
+    }
+    &__title {
+        position: relative;
+        z-index: 1;
+        &:not(:last-child) {
+            margin-bottom: 1em;
+        }
+    }
+    &__text {
+        position: relative;
+        z-index: 1;
+        @include adaptiveValue("font-size", 16, 14);
+        line-height: 150%;
+        color: $greyColor;
+        &:not(:last-child) {
+            margin-bottom: em(45, 16);
+        }
+    }
+    &__circle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 0;
+        pointer-events: none;
+        @media (max-width: $pc) {
+            opacity: 0.5;
+        }
+        &_first,
+        &_second {
+            &::before {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 100%;
+                border: 1px solid $lightbrownColor;
+                border-radius: 50%;
+            }
+        }
+        &_first {
+            @include adaptiveValue("width", 365, 100, 1170, 767.98, 1);
+            @include adaptiveValue("height", 365, 100, 1170, 767.98, 1);
+            &::before {
+                transform: translate(42%, -42%);
+            }
+        }
+        &_second {
+            @include adaptiveValue("width", 744, 240, 1170, 767.98, 1);
+            @include adaptiveValue("height", 744, 240, 1170, 767.98, 1);
+            &::before {
+                transform: translate(70%, 5%);
+            }
+        }
+    }
+}

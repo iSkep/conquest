@@ -144,7 +144,7 @@
         height: 100%;
         min-height: 220px;
         padding: 10px;
-        background: url("@img/main-page/popular/ellipse.svg") no-repeat center/contain;
+        background: url("@img/icons/ellipse.svg") no-repeat center/contain;
         .popular__item_size_m & {
             top: 50%;
             @include adaptiveValue("width", 308, 220, 1170, 767.98, 1);
@@ -158,13 +158,13 @@
         }
         .popular__item_size_l & {
             @include adaptiveValue("min-height", 467, 375, 1170, 767.98, 1);
-            background: url("@img/main-page/popular/ellipse-2.svg") no-repeat 85% / 40%;
+            background: url("@img/icons/ellipse-2.svg") no-repeat 85% / 40%;
             @media (max-width: $mobile) {
-                background: url("@img/main-page/popular/ellipse-2.svg") no-repeat calc(80% + 20px) / auto 85%;
+                background: url("@img/icons/ellipse-2.svg") no-repeat calc(80% + 20px) / auto 85%;
             }
             @media (max-width: $mobileSmall) {
                 min-height: 220px;
-                background: url("@img/main-page/popular/ellipse-2.svg") no-repeat calc(80% + 10px)/auto 83%;
+                background: url("@img/icons/ellipse-2.svg") no-repeat calc(80% + 10px)/auto 83%;
             }
         }
     }

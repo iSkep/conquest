@@ -18,7 +18,6 @@
     }
     &__collection {
         position: relative;
-        margin-bottom: 5px;
         font-family: "Playfair Display", sans-serif;
         @include adaptiveValue("font-size", 45, 22);
         line-height: 130%;
@@ -35,16 +34,23 @@
                 display: none;
             }
         }
+        &:not(:last-child) {
+            margin-bottom: 5px;
+        }
     }
     &__title {
-        margin-bottom: 1em;
+        &:not(:last-child) {
+            margin-bottom: 1em;
+        }
     }
     &__text {
         max-width: 250px;
-        @include adaptiveValue("margin-bottom", 55, 30);
         font-weight: 300;
         line-height: 150%;
         color: rgba(27, 26, 23, 0.82);
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 55, 30);
+        }
     }
     &__img {
         position: relative;

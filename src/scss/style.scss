@@ -112,6 +112,9 @@ body {
             padding: 0 rem(math.div($containerPadding, 2));
         }
     }
+    [class*="__container_small"] {
+        max-width: rem(1010);
+    }
 } @else {
     // По брейк-поинтам
     [class*="__container"] {
@@ -150,7 +153,7 @@ body {
 @import "header";
 @import "intro";
 @import "popular";
-@import "models";
+@import "advantages";
 @import "footer";
 
 // Подключение стилей отдельных страниц
