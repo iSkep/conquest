@@ -18,3 +18,46 @@
     white-space: nowrap !important;
     border: 0 !important;
 }
+
+.social-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 30%;
+    &_facebook {
+        @media (any-hover: hover) {
+            &:hover {
+                svg {
+                    fill: #4267b2;
+                }
+            }
+        }
+    }
+    &_instagram {
+        @media (any-hover: hover) {
+            &:hover {
+                svg {
+                    fill: #e1306c;
+                }
+            }
+        }
+    }
+    &_twitter {
+        @media (any-hover: hover) {
+            &:hover {
+                svg {
+                    fill: #1da1f2;
+                }
+            }
+        }
+    }
+    svg {
+        width: 24px;
+        height: 24px;
+        pointer-events: none;
+        fill: #5c5c50;
+        transition: all 0.3s ease;
+    }
+}

@@ -1,0 +1,67 @@
+.news {
+    @include adaptiveValue("padding-top", 80, 20);
+    @include adaptiveValue("padding-bottom", 80, 20);
+    &__container {
+        display: grid;
+        grid-template-columns: 3fr 4fr;
+        @include adaptiveValue("gap", 70, 25, 1170, 767.98, 1);
+        @media (max-width: $mobile) {
+            grid-template-columns: 1fr;
+        }
+    }
+    &__desc {
+        @include adaptiveValue("padding-top", 140, 100, 1170, 767.98, 1);
+        @include adaptiveValue("padding-bottom", 140, 100, 1170, 767.98, 1);
+        @media (max-width: $mobile) {
+            padding: 0;
+            text-align: center;
+        }
+    }
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: 1em;
+        }
+    }
+    &__text {
+        @include adaptiveValue("font-size", 16, 14);
+        line-height: 170%;
+        color: $greyColor;
+        &:not(:last-child) {
+            margin-bottom: 2em;
+        }
+    }
+    &__social {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        @media (max-width: $mobile) {
+            justify-content: center;
+        }
+    }
+    &__images {
+        display: grid;
+        grid-template:
+            "s1 l"
+            "s2 l";
+        grid-template-columns: minmax(200px, 240px) minmax(260px, 1fr);
+        gap: 10px;
+        @media (max-width: $mobile) {
+            grid-template-columns: 3fr 5fr;
+        }
+    }
+    &__image-ibg {
+        overflow: hidden;
+        @include adaptiveValue("min-height", 240, 130, 767.98, 320, 1);
+        &:nth-child(3) {
+            grid-area: l;
+        }
+        img {
+            transition: all 1s ease;
+            @media (any-hover: hover) {
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}
