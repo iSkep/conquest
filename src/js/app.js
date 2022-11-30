@@ -41,7 +41,7 @@ flsFunctions.fullVHfix();
 
 /* Модуль работы со спойлерами */
 // Сниппет (HTML): spoilers
-// flsFunctions.spoilers();
+flsFunctions.spoilers();
 
 /* Модуль работы с табами */
 // Сниппет (HTML): tabs
