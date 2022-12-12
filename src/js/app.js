@@ -138,8 +138,7 @@ import "./files/sliders.js";
 // import './files/scroll/lazyload.js';
 
 /* Наблюдатель за объектами c атрибутом data-watch */
-// Документация: https://template.fls.guru/template-docs/modul-nabljudatel-za-poyavleniem-elementa-pri-skrolle.html
-// import './libs/watcher.js'
+import './libs/watcher.js'
 
 // Функции работы скроллом
 import * as flsScroll from './files/scroll/scroll.js';

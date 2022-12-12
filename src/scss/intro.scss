@@ -9,11 +9,25 @@
         z-index: 3;
         flex: 0 0 50%;
         padding: 240px 0 0 85px;
+        opacity: 0;
+        transform: translate(25%, 0);
         @media (max-width: $tablet) {
             flex: 0 0 55%;
         }
         @media (max-width: $mobile) {
             padding: 200px 0 0 10px;
+        }
+        @media (max-width: $mobileSmall) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 0;
+        }
+        &._watcher-view {
+            opacity: 1;
+            transition: all 1s ease 0s;
+            transform: translate(0, 0);
         }
     }
     &__collection {
@@ -30,12 +44,19 @@
             width: 50px;
             height: 1px;
             background-color: $brownColor;
+            transform: translate(20%, 0);
             @media (max-width: $mobile) {
                 display: none;
             }
         }
         &:not(:last-child) {
             margin-bottom: 5px;
+        }
+        ._watcher-view & {
+            &::before {
+                transition: all 1s ease 0s;
+                transform: translate(0, 0);
+            }
         }
     }
     &__title {
@@ -57,6 +78,8 @@
         flex: 0 0 50%;
         height: 100%;
         padding-top: 16px;
+        opacity: 0;
+        transform: translate(10%, 0);
         @media (max-width: $tablet) {
             flex: 0 0 45%;
             padding-top: 0;
@@ -70,8 +93,18 @@
             width: 100%;
             height: 100%;
             background: url("@img/main-page/intro/ellipse.svg") no-repeat left/contain;
+            transform: translate(7%, 0);
             @media (max-width: $tablet) {
                 background-size: cover;
+            }
+        }
+        &._watcher-view {
+            opacity: 1;
+            transition: all 1s ease 0s;
+            transform: translate(0, 0);
+            &::before {
+                transition: all 1s ease 0s;
+                transform: translate(0, 0);
             }
         }
         img {
@@ -80,9 +113,15 @@
             height: 100%;
             @media (max-width: $tablet) {
                 top: 50%;
-                max-width: 350px;
+                max-width: 430px;
                 height: auto;
-                transform: translateY(-50%);
+                transform: translate(0, -50%);
+            }
+            @media (max-width: $mobile) {
+                max-width: 350px;
+            }
+            @media (max-width: $mobileSmall) {
+                transform: translate(-5%, -50%);
             }
         }
     }
@@ -95,9 +134,14 @@
         font-size: rem(16);
         line-height: 22px;
         color: #1b1a17;
+        opacity: 0;
+        transform: translate(-120%, 0);
         @media (max-width: $tablet) {
             left: -10%;
             font-size: rem(14);
+        }
+        @media (max-width: $mobileSmall) {
+            left: -13%;
         }
         @media
             only screen 
@@ -114,7 +158,16 @@
             width: 50px;
             height: 1px;
             background-color: $brownColor;
-            transform: translateY(-100%);
+            transform: translate(-20%, -100%);
+        }
+        &._watcher-view {
+            opacity: 1;
+            transition: all 1s ease 0.5s;
+            transform: translate(0, 0);
+            &::after {
+                transition: all 1s ease 0.5s;
+                transform: translate(0, -100%);
+            }
         }
     }
     &__size {
@@ -127,10 +180,17 @@
         font-size: rem(16);
         line-height: 22px;
         color: #1b1a17;
-        @media (max-width: $tablet) {
+        opacity: 0;
+        transform: translate(120%, 0);
+        @media (max-width: $pc) {
             top: 75%;
             left: -50px;
+        }
+        @media (max-width: $tablet) {
             font-size: rem(14);
+        }
+        @media (max-width: $mobileSmall) {
+            left: -60px;
         }
         @media
             only screen 
@@ -147,10 +207,22 @@
             width: 50px;
             height: 1px;
             background-color: $brownColor;
-            transform: translateY(-100%);
+            transform: translate(20%, -100%);
+            @media (max-width: $pc) {
+                left: 135px;
+            }
             @media (max-width: $tablet) {
                 left: 120px;
                 width: 25px;
+            }
+        }
+        &._watcher-view {
+            opacity: 1;
+            transition: all 1s ease 1s;
+            transform: translate(0, 0);
+            &::before {
+                transition: all 1s ease 1s;
+                transform: translate(0, -100%);
             }
         }
     }
