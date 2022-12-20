@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+    @@include('html/_head.htm',{
+    "title":"Каталог часов"
+    })
+    <body>
+        <div class="wrapper-catalog wrapper">
+            @@include('html/_header.htm',{
+                "activeClassCatalog": "active"
+            })
+            <main class="page-catalog page">
+                @@include('html/_catalog.htm',{})
+                @@include('html/_promo.htm',{})
+                @@include('html/_watchbands.htm',{})
+            </main>
+            @@include('html/_footer.htm',{})
+        </div>
+        @@include('html/_popup.htm',{})
+        @@include('html/_js.htm',{})
+        <div class="overlay"></div>
+    </body>
+</html>

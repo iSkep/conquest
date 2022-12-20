@@ -5,10 +5,10 @@
         position: relative;
     }
     &__title {
-        margin-bottom: 45px;
+        margin-bottom: rem(45);
         text-align: center;
         @media (max-width: $mobileSmall) {
-            margin-bottom: 55px;
+            margin-bottom: rem(55);
         }
     }
     &__show-more {

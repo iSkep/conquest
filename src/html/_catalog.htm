@@ -1,0 +1,480 @@
+<div class="header-inner">
+    <div class="header-inner__container">
+        <h1 class="visually-hidden">Каталог часов</h1>
+        <nav class="header-inner__breadcrumbs breadcrumbs">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                    <a href="index.html" class="breadcrumbs__link"><span>Главная</span></a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <a href="catalog.html" class="breadcrumbs__link"><span>Каталог</span></a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <span class="breadcrumbs__current">Мужские часы</span>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<section class="catalog">
+    <div class="catalog__container">
+        <div class="catalog__body">
+            <div class="catalog__settings">
+                <h2 class="catalog__title title">Мужские часы</h2>
+                <div class="catalog__control">
+                    <button class="catalog__filter-btn button button_border" type="button">Фильтры</button>
+                    <select data-speed="100" data-class-modif="catalog" name="form[]" data-show-selected>
+                        <option value="1" selected>По популярности</option>
+                        <option value="2">По рейтингу</option>
+                        <option value="3">От дешевых к дорогим</option>
+                        <option value="4">От дорогих к дешевым</option>
+                    </select>
+                </div>
+            </div>
+            <aside class="catalog__filter filter-catalog">
+                <div data-spoilers class="filter-catalog__items">
+
+                    <div class="filter-catalog__price price-filter">
+                        <button type="button" data-spoiler class="price-filter__title">Стоимость</button>
+                        <div data-range class="price-filter__body">
+                            
+                            <div class="price-filter__inputs">
+                                <input data-range-from="0" autocomplete="off" type="text" value="0" name="form[]" class="price-filter__input">
+                                <input data-range-to="100000" autocomplete="off" type="text" value="40000" name="form[]" class="price-filter__input">
+                            </div>
+                            <div data-range-item class="price-filter__range"></div>
+                        </div>
+                    </div>
+
+                    <div class="filter-catalog__item item-filter-catalog">
+                        <button type="button" data-spoiler class="item-filter-catalog__title">Бренд</button>
+                        <div class="item-filter-catalog__body">
+                            <div class="item-filter-catalog__checkbox checkbox">
+                                <input id="c_1" data-error="Ошибка" class="checkbox__input visually-hidden" type="checkbox" value="1" name="form[]">
+                                <label for="c_1" class="checkbox__label"><span class="checkbox__text">Techne <small>(250)</small></span></label>
+                            </div>
+                            <div class="item-filter-catalog__checkbox checkbox">
+                                <input id="c_2" data-error="Ошибка" class="checkbox__input visually-hidden" type="checkbox" value="1" name="form[]">
+                                <label for="c_2" class="checkbox__label"><span class="checkbox__text">Rado <small>(35)</small></span></label>
+                            </div>
+                            <div class="item-filter-catalog__checkbox checkbox">
+                                <input id="c_3" data-error="Ошибка" class="checkbox__input visually-hidden" type="checkbox" value="1" name="form[]">
+                                <label for="c_3" class="checkbox__label"><span class="checkbox__text">Bvlgari <small>(77)</small></span></label>
+                            </div>
+                            <div class="item-filter-catalog__checkbox checkbox">
+                                <input id="c_4" data-error="Ошибка" class="checkbox__input visually-hidden" type="checkbox" value="1" name="form[]">
+                                <label for="c_4" class="checkbox__label"><span class="checkbox__text">Tissot <small>(100)</small></span></label>
+                            </div>
+                            <div class="item-filter-catalog__checkbox checkbox">
+                                <input id="c_5" data-error="Ошибка" class="checkbox__input visually-hidden" type="checkbox" value="1" name="form[]">
+                                <label for="c_5" class="checkbox__label"><span class="checkbox__text">Omega <small>(18)</small></span></label>
+                            </div>
+                            <div class="item-filter-catalog__checkbox checkbox">
+                                <input id="c_6" data-error="Ошибка" class="checkbox__input visually-hidden" type="checkbox" value="1" name="form[]">
+                                <label for="c_6" class="checkbox__label"><span class="checkbox__text">Montblanc <small>(20)</small></span></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-catalog__item item-filter-catalog">
+                        <button type="button" data-spoiler class="item-filter-catalog__title">Механизм</button>
+                        <div class="item-filter-catalog__body">
+                            <div class="item-filter-catalog__checkbox checkbox">
+                                <input id="m_1" data-error="Ошибка" class="checkbox__input visually-hidden" type="checkbox" value="1" name="form[]">
+                                <label for="m_1" class="checkbox__label"><span class="checkbox__text">Автокварцевый <small>(200)</small></span></label>
+                            </div>
+                            <div class="item-filter-catalog__checkbox checkbox">
+                                <input id="m_2" data-error="Ошибка" class="checkbox__input visually-hidden" type="checkbox" value="1" name="form[]">
+                                <label for="m_2" class="checkbox__label"><span class="checkbox__text">Кварцевый <small>(75)</small></span></label>
+                            </div>
+                            <div class="item-filter-catalog__checkbox checkbox">
+                                <input id="m_3" data-error="Ошибка" class="checkbox__input visually-hidden" type="checkbox" value="1" name="form[]">
+                                <label for="m_3" class="checkbox__label"><span class="checkbox__text">Механический <small>(225)</small></span></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-catalog__item item-filter-catalog">
+                        <button type="button" data-spoiler class="item-filter-catalog__title">Материал</button>
+                        <div class="item-filter-catalog__body">
+                            <div class="item-filter-catalog__checkbox checkbox">
+                                <input id="mt_1" data-error="Ошибка" class="checkbox__input visually-hidden" type="checkbox" value="1" name="form[]">
+                                <label for="mt_1" class="checkbox__label"><span class="checkbox__text">Алюминий <small>(115)</small></span></label>
+                            </div>
+                            <div class="item-filter-catalog__checkbox checkbox">
+                                <input id="mt_2" data-error="Ошибка" class="checkbox__input visually-hidden" type="checkbox" value="1" name="form[]">
+                                <label for="mt_2" class="checkbox__label"><span class="checkbox__text">Бронза <small>(85)</small></span></label>
+                            </div>
+                            <div class="item-filter-catalog__checkbox checkbox">
+                                <input id="mt_3" data-error="Ошибка" class="checkbox__input visually-hidden" type="checkbox" value="1" name="form[]">
+                                <label for="mt_3" class="checkbox__label"><span class="checkbox__text">Золото <small>(30)</small></span></label>
+                            </div>
+                            <div class="item-filter-catalog__checkbox checkbox">
+                                <input id="mt_4" data-error="Ошибка" class="checkbox__input visually-hidden" type="checkbox" value="1" name="form[]">
+                                <label for="mt_4" class="checkbox__label"><span class="checkbox__text">Карбон <small>(70)</small></span></label>
+                            </div>
+                            <div class="item-filter-catalog__checkbox checkbox">
+                                <input id="mt_5" data-error="Ошибка" class="checkbox__input visually-hidden" type="checkbox" value="1" name="form[]">
+                                <label for="mt_5" class="checkbox__label"><span class="checkbox__text">Керамика <small>(45)</small></span></label>
+                            </div>
+                            <div class="item-filter-catalog__checkbox checkbox">
+                                <input id="mt_6" data-error="Ошибка" class="checkbox__input visually-hidden" type="checkbox" value="1" name="form[]">
+                                <label for="mt_6" class="checkbox__label"><span class="checkbox__text">Латунь <small>(72)</small></span></label>
+                            </div>
+                            <div class="item-filter-catalog__checkbox checkbox">
+                                <input id="mt_7" data-error="Ошибка" class="checkbox__input visually-hidden" type="checkbox" value="1" name="form[]">
+                                <label for="mt_7" class="checkbox__label"><span class="checkbox__text">Полимер <small>(55)</small></span></label>
+                            </div>
+                            <div class="item-filter-catalog__checkbox checkbox">
+                                <input id="mt_8" data-error="Ошибка" class="checkbox__input visually-hidden" type="checkbox" value="1" name="form[]">
+                                <label for="mt_8" class="checkbox__label"><span class="checkbox__text">Титан <small>(28)</small></span></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-catalog__item item-filter-catalog">
+                        <button type="button" data-spoiler class="item-filter-catalog__title">Цвет</button>
+                        <div class="item-filter-catalog__body">
+                            <div class="item-filter-catalog__checkbox checkbox">
+                                <input id="col_1" data-error="Ошибка" class="checkbox__input visually-hidden" type="checkbox" value="1" name="form[]">
+                                <label for="col_1" class="checkbox__label"><span class="checkbox__text">Бежевый <small>(119)</small></span></label>
+                            </div>
+                            <div class="item-filter-catalog__checkbox checkbox">
+                                <input id="col_2" data-error="Ошибка" class="checkbox__input visually-hidden" type="checkbox" value="1" name="form[]">
+                                <label for="col_2" class="checkbox__label"><span class="checkbox__text">Голубой <small>(75)</small></span></label>
+                            </div>
+                            <div class="item-filter-catalog__checkbox checkbox">
+                                <input id="col_3" data-error="Ошибка" class="checkbox__input visually-hidden" type="checkbox" value="1" name="form[]">
+                                <label for="col_3" class="checkbox__label"><span class="checkbox__text">Желтый <small>(100)</small></span></label>
+                            </div>
+                            <div class="item-filter-catalog__checkbox checkbox">
+                                <input id="col_4" data-error="Ошибка" class="checkbox__input visually-hidden" type="checkbox" value="1" name="form[]">
+                                <label for="col_4" class="checkbox__label"><span class="checkbox__text">Зеленый <small>(55)</small></span></label>
+                            </div>
+                            <div class="item-filter-catalog__checkbox checkbox">
+                                <input id="col_5" data-error="Ошибка" class="checkbox__input visually-hidden" type="checkbox" value="1" name="form[]">
+                                <label for="col_5" class="checkbox__label"><span class="checkbox__text">Коричневый <small>(38)</small></span></label>
+                            </div>
+                            <div class="item-filter-catalog__checkbox checkbox">
+                                <input id="col_6" data-error="Ошибка" class="checkbox__input visually-hidden" type="checkbox" value="1" name="form[]">
+                                <label for="col_6" class="checkbox__label"><span class="checkbox__text">Красный <small>(77)</small></span></label>
+                            </div>
+                            <div class="item-filter-catalog__checkbox checkbox">
+                                <input id="col_7" data-error="Ошибка" class="checkbox__input visually-hidden" type="checkbox" value="1" name="form[]">
+                                <label for="col_7" class="checkbox__label"><span class="checkbox__text">Белый <small>(11)</small></span></label>
+                            </div>
+                            <div class="item-filter-catalog__checkbox checkbox">
+                                <input id="col_8" data-error="Ошибка" class="checkbox__input visually-hidden" type="checkbox" value="1" name="form[]">
+                                <label for="col_8" class="checkbox__label"><span class="checkbox__text">Золотистый <small>(25)</small></span></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="filter-catalog__reset button button_border" type="button">Сбросить фильтр</button>
+                <button class="filter-catalog__back button button_border" type="button">Назад</button>
+
+            </aside>
+            <div class="catalog__products">
+                <article class="product-card">
+                    <div class="product-card__actions">
+                        <h3 class="product-card__title">
+                            <a class="product-card__title-link" href="#">Techne</a>
+                        </h3>
+                        <button class="product-card__favorite action-btn" type="button">
+                            <svg>
+                                <use xlink:href="@img/icons/sprite.svg#svg-heart"></use>
+                            </svg>
+                        </button>
+                        <button class="product-card__cart action-btn" type="button">
+                            <svg>
+                                <use xlink:href="@img/icons/sprite.svg#svg-cart"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <span class="product-card__price">5 700 ₴</span>
+                    <a href="" class="product-card__image">
+                        <span class="product-card__image-item-ibg product-card__image-ibg_contain">
+                            <img src="@img/catalog/watches/watch-1.png" alt="Наручные часы" />
+                        </span>
+                    </a>
+                </article>
+                <article class="product-card">
+                    <div class="product-card__actions">
+                        <h3 class="product-card__title">
+                            <a class="product-card__title-link" href="#">Techne</a>
+                        </h3>
+                        <button class="product-card__favorite action-btn" type="button">
+                            <svg>
+                                <use xlink:href="@img/icons/sprite.svg#svg-heart"></use>
+                            </svg>
+                        </button>
+                        <button class="product-card__cart action-btn" type="button">
+                            <svg>
+                                <use xlink:href="@img/icons/sprite.svg#svg-cart"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <span class="product-card__price">5 700 ₴</span>
+                    <a href="" class="product-card__image">
+                        <span class="product-card__image-item-ibg product-card__image-ibg_contain">
+                            <img src="@img/catalog/watches/watch-2.png" alt="Наручные часы" />
+                        </span>
+                    </a>
+                </article>
+                <article class="product-card">
+                    <div class="product-card__actions">
+                        <h3 class="product-card__title">
+                            <a class="product-card__title-link" href="#">Techne</a>
+                        </h3>
+                        <button class="product-card__favorite action-btn" type="button">
+                            <svg>
+                                <use xlink:href="@img/icons/sprite.svg#svg-heart"></use>
+                            </svg>
+                        </button>
+                        <button class="product-card__cart action-btn" type="button">
+                            <svg>
+                                <use xlink:href="@img/icons/sprite.svg#svg-cart"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <span class="product-card__price">8 700 ₴</span>
+                    <a href="" class="product-card__image">
+                        <span class="product-card__image-item-ibg product-card__image-ibg_contain">
+                            <img src="@img/catalog/watches/watch-3.png" alt="Наручные часы" />
+                        </span>
+                    </a>
+                </article>
+                <article class="product-card">
+                    <div class="product-card__actions">
+                        <h3 class="product-card__title">
+                            <a class="product-card__title-link" href="#">Techne</a>
+                        </h3>
+                        <button class="product-card__favorite action-btn" type="button">
+                            <svg>
+                                <use xlink:href="@img/icons/sprite.svg#svg-heart"></use>
+                            </svg>
+                        </button>
+                        <button class="product-card__cart action-btn" type="button">
+                            <svg>
+                                <use xlink:href="@img/icons/sprite.svg#svg-cart"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <span class="product-card__price">8 700 ₴</span>
+                    <a href="" class="product-card__image">
+                        <span class="product-card__image-item-ibg product-card__image-ibg_contain">
+                            <img src="@img/catalog/watches/watch-4.png" alt="Наручные часы" />
+                        </span>
+                    </a>
+                </article>
+                <article class="product-card">
+                    <div class="product-card__actions">
+                        <h3 class="product-card__title">
+                            <a class="product-card__title-link" href="#">Techne</a>
+                        </h3>
+                        <button class="product-card__favorite action-btn" type="button">
+                            <svg>
+                                <use xlink:href="@img/icons/sprite.svg#svg-heart"></use>
+                            </svg>
+                        </button>
+                        <button class="product-card__cart action-btn" type="button">
+                            <svg>
+                                <use xlink:href="@img/icons/sprite.svg#svg-cart"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <span class="product-card__price">5 700 ₴</span>
+                    <a href="" class="product-card__image">
+                        <span class="product-card__image-item-ibg product-card__image-ibg_contain">
+                            <img src="@img/catalog/watches/watch-5.png" alt="Наручные часы" />
+                        </span>
+                    </a>
+                </article>
+                <article class="product-card">
+                    <div class="product-card__actions">
+                        <h3 class="product-card__title">
+                            <a class="product-card__title-link" href="#">Techne</a>
+                        </h3>
+                        <button class="product-card__favorite action-btn" type="button">
+                            <svg>
+                                <use xlink:href="@img/icons/sprite.svg#svg-heart"></use>
+                            </svg>
+                        </button>
+                        <button class="product-card__cart action-btn" type="button">
+                            <svg>
+                                <use xlink:href="@img/icons/sprite.svg#svg-cart"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <span class="product-card__price">9 500 ₴</span>
+                    <a href="" class="product-card__image">
+                        <span class="product-card__image-item-ibg product-card__image-ibg_contain">
+                            <img src="@img/catalog/watches/watch-6.png" alt="Наручные часы" />
+                        </span>
+                    </a>
+                </article>
+                <article class="product-card">
+                    <div class="product-card__actions">
+                        <h3 class="product-card__title">
+                            <a class="product-card__title-link" href="#">Techne</a>
+                        </h3>
+                        <button class="product-card__favorite action-btn" type="button">
+                            <svg>
+                                <use xlink:href="@img/icons/sprite.svg#svg-heart"></use>
+                            </svg>
+                        </button>
+                        <button class="product-card__cart action-btn" type="button">
+                            <svg>
+                                <use xlink:href="@img/icons/sprite.svg#svg-cart"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <span class="product-card__price">5 700 ₴</span>
+                    <a href="" class="product-card__image">
+                        <span class="product-card__image-item-ibg product-card__image-ibg_contain">
+                            <img src="@img/catalog/watches/watch-7.png" alt="Наручные часы" />
+                        </span>
+                    </a>
+                </article>
+                <article class="product-card">
+                    <div class="product-card__actions">
+                        <h3 class="product-card__title">
+                            <a class="product-card__title-link" href="#">Rado</a>
+                        </h3>
+                        <button class="product-card__favorite action-btn" type="button">
+                            <svg>
+                                <use xlink:href="@img/icons/sprite.svg#svg-heart"></use>
+                            </svg>
+                        </button>
+                        <button class="product-card__cart action-btn" type="button">
+                            <svg>
+                                <use xlink:href="@img/icons/sprite.svg#svg-cart"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <span class="product-card__price">4 800 ₴</span>
+                    <a href="" class="product-card__image">
+                        <span class="product-card__image-item-ibg product-card__image-ibg_contain">
+                            <img src="@img/catalog/watches/watch-8.png" alt="Наручные часы" />
+                        </span>
+                    </a>
+                </article>
+                <article class="product-card">
+                    <div class="product-card__actions">
+                        <h3 class="product-card__title">
+                            <a class="product-card__title-link" href="#">Bvlgari</a>
+                        </h3>
+                        <button class="product-card__favorite action-btn" type="button">
+                            <svg>
+                                <use xlink:href="@img/icons/sprite.svg#svg-heart"></use>
+                            </svg>
+                        </button>
+                        <button class="product-card__cart action-btn" type="button">
+                            <svg>
+                                <use xlink:href="@img/icons/sprite.svg#svg-cart"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <span class="product-card__price">25 200 ₴</span>
+                    <a href="" class="product-card__image">
+                        <span class="product-card__image-item-ibg product-card__image-ibg_contain">
+                            <img src="@img/catalog/watches/watch-9.png" alt="Наручные часы" />
+                        </span>
+                    </a>
+                </article>
+                <article class="product-card">
+                    <div class="product-card__actions">
+                        <h3 class="product-card__title">
+                            <a class="product-card__title-link" href="#">Techne</a>
+                        </h3>
+                        <button class="product-card__favorite action-btn" type="button">
+                            <svg>
+                                <use xlink:href="@img/icons/sprite.svg#svg-heart"></use>
+                            </svg>
+                        </button>
+                        <button class="product-card__cart action-btn" type="button">
+                            <svg>
+                                <use xlink:href="@img/icons/sprite.svg#svg-cart"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <span class="product-card__price">9 500 ₴</span>
+                    <a href="" class="product-card__image">
+                        <span class="product-card__image-item-ibg product-card__image-ibg_contain">
+                            <img src="@img/catalog/watches/watch-10.png" alt="Наручные часы" />
+                        </span>
+                    </a>
+                </article>
+                <article class="product-card">
+                    <div class="product-card__actions">
+                        <h3 class="product-card__title">
+                            <a class="product-card__title-link" href="#">Rado</a>
+                        </h3>
+                        <button class="product-card__favorite action-btn" type="button">
+                            <svg>
+                                <use xlink:href="@img/icons/sprite.svg#svg-heart"></use>
+                            </svg>
+                        </button>
+                        <button class="product-card__cart action-btn" type="button">
+                            <svg>
+                                <use xlink:href="@img/icons/sprite.svg#svg-cart"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <span class="product-card__price">7 500 ₴</span>
+                    <a href="" class="product-card__image">
+                        <span class="product-card__image-item-ibg product-card__image-ibg_contain">
+                            <img src="@img/catalog/watches/watch-11.png" alt="Наручные часы" />
+                        </span>
+                    </a>
+                </article>
+                <article class="product-card">
+                    <div class="product-card__actions">
+                        <h3 class="product-card__title">
+                            <a class="product-card__title-link" href="#">Techne</a>
+                        </h3>
+                        <button class="product-card__favorite action-btn" type="button">
+                            <svg>
+                                <use xlink:href="@img/icons/sprite.svg#svg-heart"></use>
+                            </svg>
+                        </button>
+                        <button class="product-card__cart action-btn" type="button">
+                            <svg>
+                                <use xlink:href="@img/icons/sprite.svg#svg-cart"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <span class="product-card__price">5 700 ₴</span>
+                    <a href="" class="product-card__image">
+                        <span class="product-card__image-item-ibg product-card__image-ibg_contain">
+                            <img src="@img/catalog/watches/watch-12.png" alt="Наручные часы" />
+                        </span>
+                    </a>
+                </article>
+            </div>
+            <div class="catalog__footer">
+                <div class="catalog__pagging pagging">
+                    <button disabled type="button" class="pagging__arrow-left arrow arrow_left"></button>
+                    <ul class="pagging__list">
+                        <li class="pagging__item">
+                            <a href="#" class="pagging__link _active">1</a>
+                        </li>
+                        <li class="pagging__item">
+                            <a href="#" class="pagging__link">2</a>
+                        </li>
+                        <li class="pagging__item">
+                            <a href="#" class="pagging__link">3</a>
+                        </li>
+                        <li class="pagging__item">
+                            <a href="#" class="pagging__link">...</a>
+                        </li>
+                        <li class="pagging__item">
+                            <a href="#" class="pagging__link">12</a>
+                        </li>
+                    </ul>
+                    <button type="button" class="pagging__arrow-right arrow arrow_right"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

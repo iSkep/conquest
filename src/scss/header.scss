@@ -6,8 +6,20 @@
     z-index: 5;
     width: 100%;
     transition: all 0.3s, padding-right 0s;
+    .wrapper-catalog & {
+        position: relative;
+        margin-bottom: 20px;
+    }
     &._header-scroll {
         background-color: rgba($color: $bgColor, $alpha: 0.9);
+    }
+    &__wrapper {
+        .wrapper-catalog & {
+            box-sizing: content-box;
+            max-width: 73.125rem;
+            padding: 0 0.9375rem;
+            margin: 0 auto;
+        }
     }
     &__body {
         display: flex;
@@ -20,14 +32,41 @@
         @media (max-width: em(1399.98)) {
             padding: 5px 15px;
         }
+        @media (min-width: $tablet) {
+            .wrapper-catalog & {
+                gap: rem(20);
+            }
+        }
         &._watcher-view {
             opacity: 1;
-            transition: all 2s ease 0s;
+            transition: opacity 2s ease 0s;
+        }
+        .wrapper-catalog & {
+            padding: 0;
         }
     }
     &__main {
         display: flex;
         @include adaptiveValue("gap", 16, 5);
+        @media (min-width: $tablet) {
+            .wrapper-catalog & {
+                flex: 1 1 70%;
+                gap: 0;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+    }
+    &__actions {
+        display: flex;
+        gap: 5px;
+        @media (min-width: $tablet) {
+            .wrapper-catalog & {
+                flex: 1 1 30%;
+                justify-content: flex-end;
+                min-width: 375px;
+            }
+        }
     }
     &__logo {
         display: flex;
@@ -44,6 +83,20 @@
 }
 
 .menu {
+    @media (min-width: $tablet) {
+        .wrapper-catalog & {
+            order: 1;
+        }
+    }
+    &__item {
+        &:nth-child(1) {
+            @media (min-width: $tablet) {
+                .wrapper-catalog & {
+                    display: none;
+                }
+            }
+        }
+    }
     &__body {
         position: absolute;
         top: 0;
@@ -58,23 +111,47 @@
         background: radial-gradient(circle, rgba($color: #eee8da, $alpha: 0.5), rgba($color: #eee8da, $alpha: 0.5));
         border-radius: 50%;
         transition: all 0.3s ease;
-        @media (max-width: $mobile) {
+        @media (max-width: $tablet) {
             background: radial-gradient(circle, rgba($color: #eee8da, $alpha: 0.97), rgba($color: #eee8da, $alpha: 0.97));
+        }
+        @media (min-width: $tablet) {
+            .wrapper-catalog & {
+                position: relative;
+                flex-direction: row;
+                width: auto;
+                height: auto;
+                background: none;
+                border-radius: 0;
+            }
         }
         .menu-open & {
             width: 520px;
             height: 460px;
             transform: translate(-60%, -30%);
+            @media (max-width: em(600)) {
+                transform: translate(-66%, -27%);
+            }
         }
     }
     &__list {
         display: none;
         flex-direction: column;
-        row-gap: rem(20);
         margin: 90px 90px 0 0;
         font-family: "Playfair Display", sans-serif;
         @media (max-width: em(1399.98)) {
-            margin: 150px 100px 0 0;
+            margin: 140px 95px 0 0;
+        }
+        @media (max-width: em(600)) {
+            margin: 115px 65px 0 0;
+        }
+        @media (min-width: $tablet) {
+            .wrapper-catalog & {
+                display: flex;
+                flex-direction: row;
+                margin: 0;
+                font-family: "Roboto", sans-serif;
+                @include adaptiveValue("column-gap", 65, 30, 1170, 991, 1);
+            }
         }
         .menu-open & {
             display: flex;
@@ -82,13 +159,23 @@
     }
     &__link {
         position: relative;
-        padding: 5px 0;
+        display: block;
+        padding: 10px 0;
         font-size: rem(18);
         transition: all 0.3s ease;
+        @media (min-width: $tablet) {
+            .wrapper-catalog & {
+                font-size: rem(14);
+                color: #555248;
+            }
+        }
         @media (any-hover: hover) {
             &:hover {
-                color: $lightbrownColor;
+                color: #a69876;
             }
+        }
+        &.active {
+            color: #a69876;
         }
     }
 }
@@ -106,6 +193,11 @@
     cursor: pointer;
     border-radius: 30%;
     transition: all 0.3s ease 0s;
+    @media (min-width: $tablet) {
+        .wrapper-catalog & {
+            display: none;
+        }
+    }
     @media (any-hover: hover) {
         &:hover {
             background-color: #eee8da;
@@ -115,6 +207,9 @@
         &:active {
             background-color: #eee8da;
         }
+    }
+    .wrapper-catalog & {
+        width: 30px;
     }
     span,
     &::before,

@@ -1,0 +1,60 @@
+.watchbands {
+    @include adaptiveValue("padding-top", 75, 30);
+    @include adaptiveValue("padding-bottom", 75, 30);
+    &__container {
+        position: relative;
+    }
+    &__show-more {
+        position: absolute;
+        top: 35px;
+        right: 15px;
+        padding-bottom: 7px;
+        @include adaptiveValue("font-size", 16, 14);
+        font-weight: 500;
+        color: $greyColor;
+        border-bottom: 1px solid #c4c0b6;
+        transition: all 0.2s ease;
+        @media (max-width: $mobileSmall) {
+            top: 50px;
+            padding-bottom: 3px;
+        }
+        &:hover {
+            padding-bottom: 4px;
+            color: $silverColor;
+        }
+    }
+    &__wrapper {
+        @media (max-width: $mobile) {
+            margin-bottom: rem(20);
+        }
+    }
+    &__slider {
+        position: relative;
+        padding: 10px 40px;
+        margin: 0 -40px;
+        @media (max-width: em(1399.98)) {
+            margin: 0 auto;
+        }
+        @media (max-width: $mobile) {
+            padding: 10px 0;
+        }
+    }
+    &__title {
+        margin-bottom: rem(45);
+    }
+    &__controls {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        transform: translate(0, -50%);
+        @media (max-width: $mobile) {
+            position: relative;
+            gap: rem(60);
+            justify-content: center;
+            transform: translate(0, 0);
+        }
+    }
+}

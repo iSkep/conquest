@@ -79,8 +79,8 @@ function initSliders() {
 
             // Кнопки "влево/вправо"
             navigation: {
-                prevEl: '.advantages__arrow_left',
-                nextEl: '.advantages__arrow_right',
+                prevEl: '.advantages__arrow-left',
+                nextEl: '.advantages__arrow-right',
             },
 
             // Брейкпоинты
@@ -107,6 +107,88 @@ function initSliders() {
             */
             // События
             on: {},
+        });
+    }
+    if (document.querySelector('.watchbands__slider')) {
+        // Указываем скласс нужного слайдера
+        // Создаем слайдер
+        new Swiper('.watchbands__slider', {
+            // Указываем скласс нужного слайдера
+            // Подключаем модули слайдера
+            // для конкретного случая
+            modules: [Navigation, Autoplay, Pagination],
+            observer: true,
+            observeParents: true,
+            slidesPerView: 3,
+            // autoHeight: true,
+            speed: 2000,
+
+            //touchRatio: 0,
+            //simulateTouch: false,
+            loop: false,
+            //preloadImages: false,
+            //lazy: true,
+
+            // Эффекты
+            // effect: 'fade',
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+
+            // Скроллбар
+            /*
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                draggable: true,
+            },
+            */
+
+            // Кнопки "влево/вправо"
+            navigation: {
+                prevEl: '.watchbands__arrow-left',
+                nextEl: '.watchbands__arrow-right',
+            },
+
+            // Брейкпоинты
+            
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    autoHeight: true,
+                },
+                479.98: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                },
+                991.98: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                },
+                // 1268: {
+                //     slidesPerView: 4,
+                //     spaceBetween: 30,
+                // },
+            },
+            
+            // События
+            on: {
+                // update markup for dup-slides
+                // slideChangeTransitionStart: function(swiper) {
+                //     let $wrapperEl = swiper.$wrapperEl;
+                //     let params = swiper.params;
+                //     $wrapperEl.children(('.' + (params.slideClass) + '.' + (params.slideDuplicateClass)))
+                //         .each(function() {
+                //             let idx = this.getAttribute('data-swiper-slide-index');
+                //             this.innerHTML = $wrapperEl.children('.' + params.slideClass + '[data-swiper-slide-index="' + idx + '"]:not(.' + params.slideDuplicateClass + ')').html();
+                //         });
+                // },
+        
+                // slideChangeTransitionEnd: function(swiper) {
+                //     swiper.slideToLoop(swiper.realIndex, 0, false);
+                // }
+            },
         });
     }
 }

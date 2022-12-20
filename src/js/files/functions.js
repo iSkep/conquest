@@ -157,7 +157,7 @@ export let _slideToggle = (target, duration = 500) => {
 };
 // Вспомогательные модули блокировки прокрутки и скочка ====================================================================================================================================================================================================================================================================================
 export let bodyLockStatus = true;
-export let bodyLockToggle = (delay = 500) => {
+export let bodyLockToggle = (delay = 0) => {
     if (document.documentElement.classList.contains('lock')) {
         bodyUnlock(delay);
     } else {
@@ -457,6 +457,13 @@ export function menuInit() {
         document.addEventListener('click', function (e) {
             if (bodyLockStatus && e.target.closest('.icon-menu')) {
                 // bodyLockToggle();
+                document.documentElement.classList.toggle('menu-open');
+            }
+        });
+               
+        document.addEventListener('keydown', function (e) {
+            const menuIsOpen = document.querySelector('.menu-open');
+            if (e.which == 27 && e.code === 'Escape' && menuIsOpen) {
                 document.documentElement.classList.toggle('menu-open');
             }
         });

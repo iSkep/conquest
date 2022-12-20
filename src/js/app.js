@@ -65,15 +65,14 @@ import './libs/parallax-mouse.js'
 import * as flsForms from './files/forms/forms.js';
 
 /* Работа с полями формы */
-/*
+
 flsForms.formFieldsInit({
     viewPass: false,
     autoHeight: false
 });
-*/
 
 /* Oтправка формы */
-// flsForms.formSubmit();
+flsForms.formSubmit();
 
 /* Модуль формы "колличество" */
 // flsForms.formQuantity();
@@ -82,7 +81,7 @@ flsForms.formFieldsInit({
 // flsForms.formRating();
 
 /* Модуль работы с select. */
-// import './libs/select.js'
+import './libs/select.js'
 
 /* Модуль работы с календарем */
 // import './files/forms/datepicker.js'
@@ -100,7 +99,7 @@ flsForms.formFieldsInit({
 Документация плагина: https://refreshless.com/nouislider/
 Сниппет (HTML): range
 */
-// import "./files/forms/range.js";
+import "./files/forms/range.js";
 
 /* Модуль работы с подсказками (tippy) */
 /*

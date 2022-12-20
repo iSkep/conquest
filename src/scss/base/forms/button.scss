@@ -5,7 +5,7 @@
     min-width: 185px;
     min-height: 64px;
     padding: 0 24px;
-    font-size: 12px;
+    font-size: rem(12);
     font-weight: 500;
     color: #fff;
     text-transform: uppercase;
@@ -27,39 +27,46 @@
             }
         }
     }
-    &:active {
-        transform: scale(0.9);
-    }
-}
-
-.actions {
-    display: flex;
-    gap: 5px;
-    &__item {
-        svg {
-            width: 20px;
-            height: 20px;
-            pointer-events: none;
-        }
-    }
-    &__icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        border-radius: 30%;
-        transition: all 0.3s ease;
+    &_border {
+        color: $mainColor;
+        border: 2px solid #e7e0cf;
         @media (any-hover: hover) {
             &:hover {
                 background-color: $actionsColor;
             }
         }
-        @media (any-hover: none) {
-            &:active {
-                background-color: $actionsColor;
-            }
+    }
+    &:active {
+        transform: scale(0.9);
+    }
+}
+
+.action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 30%;
+    transition: all 0.3s ease;
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: $actionsColor;
         }
+    }
+    @media (any-hover: none) {
+        &:active {
+            background-color: $actionsColor;
+        }
+    }
+    svg {
+        width: 20px;
+        height: 20px;
+        pointer-events: none;
+    }
+    .product-card & {
+        width: 30px;
+        height: 30px;
     }
 }
 
