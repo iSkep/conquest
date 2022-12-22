@@ -3,8 +3,9 @@ import { isMobile, bodyLockToggle, bodyLockStatus } from './functions.js';
 import { flsModules } from './modules.js';
 import { rangeItems } from './forms/range.js';
 
+const filterPanel = document.querySelector('.filter-catalog');
+
 function filterMenuInit() {
-    const filterPanel = document.querySelector('.filter-catalog');
     const filterBtn = document.querySelector('.catalog__filter-btn');
 
     if (filterBtn) {
@@ -43,16 +44,18 @@ function filterResetBtnInit(params) {
     const btnResetFilter = document.querySelector('.filter-catalog__reset');
     const filterCheckboxes = document.querySelectorAll('.filter-catalog input[type=checkbox]');
 
-    btnResetFilter.addEventListener('click', () => {
-        filterCheckboxes.forEach((checkbox) => {
-            checkbox.checked = false;
+    if (filterPanel) {
+        btnResetFilter.addEventListener('click', () => {
+            filterCheckboxes.forEach((checkbox) => {
+                checkbox.checked = false;
+            });
+    
+            rangeItems.forEach((rangeItem) => {
+                const item = rangeItem.querySelector('[data-range-item]');
+                item.noUiSlider.reset();
+            });
         });
-
-        rangeItems.forEach((rangeItem) => {
-            const item = rangeItem.querySelector('[data-range-item]');
-            item.noUiSlider.reset();
-        });
-    });
+    }
 }
 
 // Кнопка "Добавить в избранное"

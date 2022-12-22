@@ -174,8 +174,10 @@
                 color: #a69876;
             }
         }
-        &.active {
-            color: #a69876;
+        .wrapper-catalog & {
+            &.active {
+                color: #a69876;
+            }
         }
     }
 }
