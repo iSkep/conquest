@@ -1,4 +1,4 @@
-# [CONQUEST](https://conquest-skep.netlify.app/) | Watch store
+# [CONQUEST](https://conquest-skep.netlify.app/) | Watch Store
 
 ## 🐱‍💻 Tech stack
 * HTML, CSS, SCSS
