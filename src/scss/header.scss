@@ -110,7 +110,7 @@
         overflow: hidden;
         background: radial-gradient(circle, rgba($color: #eee8da, $alpha: 0.5), rgba($color: #eee8da, $alpha: 0.5));
         border-radius: 50%;
-        transition: all 0.3s ease;
+        transition: all 0.3s ease 1ms;
         @media (max-width: $tablet) {
             background: radial-gradient(circle, rgba($color: #eee8da, $alpha: 0.97), rgba($color: #eee8da, $alpha: 0.97));
         }
